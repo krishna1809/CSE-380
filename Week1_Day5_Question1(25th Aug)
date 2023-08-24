@@ -1,0 +1,61 @@
+/*
+Consider that there is a cricket player named Smith who hits certain number of 4s and 6s in a cricket match. Find out total numbers of scores he makes with his 4s & 6s only.
+
+Input Format
+
+In First input line, you should enter number of 4s hit by Smith. In Second input line, you should enter number of 6s hit by Smith.
+
+Constraints
+
+Enter only integer (positive) value. 0<=n<=100
+
+Output Format
+
+Total numbers of scores Smith makes with his 4s & 6s only. If any input is given negative, then total scores should be counted as 0.
+
+Sample Input 0
+
+1
+2
+Sample Output 0
+
+16
+Sample Input 1
+
+2
+2
+Sample Output 1
+
+20
+Sample Input 2
+
+2
+1
+Sample Output 2
+
+14
+*/
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int f,s,four=4,six=6,score=0;
+        Scanner scan = new Scanner(System.in);
+        f=scan.nextInt();
+        s=scan.nextInt();
+        if((f>=0 && f<=100) && (s>=0 && s<=100))
+        {
+            score=(four*f)+(six*s);
+            System.out.print(score);
+        }
+        else
+            System.out.print(score);
+    }
+}
