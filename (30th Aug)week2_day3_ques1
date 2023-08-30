@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n;
+        double t,con,con2;
+        n=scan.nextInt();
+        t=scan.nextDouble();
+        switch (n)
+        {
+            case 1:
+            { con=(t-32)*5/9;
+            System.out.format("%.2f",con);
+            break;}
+            case 2:
+            {con2=(t*9/5)+32;
+            System.out.format("%.1f",con2);
+            break;}
+            default:
+            {System.out.print("INVALID CHOICE");}
+        }
+    }
+}
