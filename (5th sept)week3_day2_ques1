@@ -1,0 +1,73 @@
+/*
+Vijay and Gaurav are two friends. They are playing a game to check that whether the first word is similar to second or not. For example first word is "loop" and second is "lloooopp". These words will be considered similar as characters are same and in first word 'l' is occuring 1 time, 'o' is 2 times and 'p' is 1 time i.e occurance of 'l'= occurance of 'p' and occurance of 'o' is double than the occurance of 'l' and 'p'. Help them using program.
+
+Input Format
+
+First line will contain two space seperated words.
+
+Constraints
+
+Input will be two space seperated words only.
+
+Output Format
+
+Similar/ Not Similar
+
+Sample Input 0
+
+loop llooooopp
+Sample Output 0
+
+Not Similar
+Sample Input 1
+
+cool looc
+Sample Output 1
+
+Similar
+*/
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int count=0,count2=0;
+        Scanner scan =new Scanner(System.in);
+        String s=scan.next();
+        String s2=scan.next();
+        char ch;
+        for(int i=0;i<s.length();i++)
+        {
+            for(int j=0;j<s.length();j++)
+            {
+                ch=s.charAt(j);
+            if(s.charAt(i)==ch)
+                count++;
+            }
+        }
+        for(int i=0;i<s2.length();i++)
+        {
+            for(int j=0;j<s2.length();j++)
+            {
+                ch=s2.charAt(j);
+            if(s2.charAt(i)==ch)
+                count2++;
+            }
+        }
+       if(count==count2)
+       {
+           System.out.print("Similar");
+       }
+        else
+        {
+            System.out.print("Not Similar");
+        }
+    }
+}
