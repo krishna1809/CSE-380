@@ -1,0 +1,68 @@
+/*
+Ask the user to enter an input of integer type, which represents the number of rows. If the value entered by him is greater than 0, then display the pattern of numbers as explained in example below. Example: Pattern for rows to be displayed if user enters no. of rows as 5: 1 2 3 4 5 1 2 3 4 1 2 3 1 2 1
+
+If the input entered by user is negative no. then display the message “Invalid Rows” without any pattern.
+
+Input Format
+
+Your program should take the number of rows as integer input.
+
+Constraints
+
+Number of rows should be positive int value. i.e. 1 <= n <= 10
+
+Output Format
+
+If input given is a positive number, then display the pattern. Otherwise, if input given is a negative or zero, then display the message “Invalid Rows”.
+
+Sample Input 0
+
+5
+Sample Output 0
+
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+Sample Input 1
+
+6
+Sample Output 1
+
+1 2 3 4 5 6
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+*/
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan =new Scanner(System.in);
+        int n=scan.nextInt();
+        if(n<0 ||n>10)
+        {
+            System.out.println("Invalid Rows");
+            return;
+        }
+        while(n!=0)
+        {
+        for(int i=1;i<=n;i++)
+        {
+            System.out.print(i+" ");
+        }
+            System.out.println("");
+            n--;
+        }
+    }
+}
