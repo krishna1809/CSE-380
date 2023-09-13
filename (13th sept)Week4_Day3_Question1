@@ -1,0 +1,74 @@
+/*
+Write a program to find second largest element of int type array. If any value in the input array will be negative, display the message “Invalid Array Elements” otherwise display the second largest element.
+
+Input Format
+
+Your program should take the two types of input. First input will represent size of array and second will represent the values of array. If the size of the array will be negative, display the message “Invalid Array Size” without asking any other input.
+
+Constraints
+
+Size of the array should be positive All the elements of the array should be positive
+
+Output Format
+
+If the size of the array will be negative, display the message “Invalid Array Size” without asking any other input. If all the input elements of the array are positive (including 0) then display the second largest elements of the array otherwise display the message “Invalid Array Elements”.
+
+Sample Input 0
+
+3
+4
+2
+5
+Sample Output 0
+
+4
+*/
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+       Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        if(n<=-1)
+        {
+            System.out.print("Invalid Array Size");
+            return;
+        }
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=scan.nextInt();
+            if(arr[i]<=-1)
+        {
+            System.out.print("Invalid Array Element");
+            return;
+        }
+        }
+        
+        int j,i;
+        for(i=0;i<n-1;i++)
+        {
+            int temp=i;
+            for(j=i+1;j<n;j++)
+            {
+                if(arr[j]>arr[temp])
+                {
+                    temp=j;
+                }
+            }
+            if(temp!=i)
+            {
+                int s=arr[i];
+                arr[i]=arr[temp];
+                arr[temp]=s;
+            }
+        }
+        System.out.print(arr[1]);
+    }
+}
