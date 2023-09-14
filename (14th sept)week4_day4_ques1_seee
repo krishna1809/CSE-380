@@ -1,0 +1,47 @@
+/*
+rite a program that creates integer array of n elements, accepts the values of arrays and find sum of elements as an integer.
+
+Input Format
+
+Accepts n values from the user.
+
+Constraints
+
+All number should be integer values (Positive, negative and zero)
+
+Output Format
+
+diplays the sum of the array's elements as a single integer.
+
+Sample Input 0
+
+5
+3 4 10 11 20
+Sample Output 0
+
+48
+*/
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int n;
+        Scanner scan=new Scanner(System.in);
+        n=scan.nextInt();
+        int arr[]=new int[n];
+        int sum=0;
+        for(int i=0;i<n;i++)
+        {
+            int te=scan.nextInt();
+            arr[i]=te;
+            sum=sum+te;
+        }
+        System.out.print(sum);
+    }
+}
