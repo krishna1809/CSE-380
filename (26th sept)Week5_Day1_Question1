@@ -1,0 +1,92 @@
+/*
+My son Priyanshu got an assignment from his teacher to perform multiplication of complex number. Help him to complete his assignment. Write a java code with following features: class Name: Complex Instance Variable: real, imaginary (int type) Constructor: ** 1. Complex() 2. Complex(int, int)
+
+**Instance Method: 1. Mul_Complex(Complex, Complex) 2. Display() Read the real and imaginary from user and pass to the constructor as parameter Write a separate class Test_Complex with a main() method and test the Complex class methods
+
+Input Format
+
+First line Read the complex number 1 for real and imaginary First line Read the complex number 2 for real and imaginary
+
+Constraints
+
+real, imaginary > 1
+
+Output Format
+
+Print the Result in form of complex number : a+bi
+
+Sample Input 0
+
+2 3
+4 5
+Sample Output 0
+
+-7+22i
+Sample Input 1
+
+0 1
+2 3
+Sample Output 1
+
+-3+2i
+Sample Input 2
+
+2
+4 2
+Sample Output 2
+
+8+4i
+*/
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+class Complex {
+   private int real;
+   private int imaginary;
+   
+   public Complex() {
+      real = 0;
+      imaginary = 0;
+   }
+   
+   public Complex(int real, int imaginary) {
+      this.real = real;
+      this.imaginary = imaginary;
+   }
+   
+   public Complex multiply(Complex num) {
+      int realResult = (this.real * num.real) - (this.imaginary * num.imaginary);
+      int imaginaryResult = (this.real * num.imaginary) + (this.imaginary * num.real);
+      
+      return new Complex(realResult, imaginaryResult);
+   }
+   
+   public void display() {
+      System.out.println(this.real + "+" + this.imaginary + "i");
+   }
+}
+
+public class TestComplex {
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      
+      int num1Real=0,num1Imaginary=0,num2Real=0,num2Imaginary=0;
+       num1Real = scanner.nextInt();
+       num1Imaginary = scanner.nextInt();
+      
+       num2Real = scanner.nextInt();
+       num2Imaginary = scanner.nextInt();
+      
+      Complex complex1 = new Complex(num1Real, num1Imaginary);
+      Complex complex2 = new Complex(num2Real, num2Imaginary);
+      
+      Complex result = complex1.multiply(complex2);
+      
+      result.display();
+   }
+}
