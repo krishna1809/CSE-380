@@ -1,0 +1,72 @@
+/*
+It's PTM tomorrow in Cambridge School.Teachers want to show the grades from(A to E) depending on the percentage of the student. Help the teacher's by developing the program for the same.To find the grade of a student, given the marks of N subjects. Given the marks of N subjects, we have to print the grade of a student based on the following grade slab.
+
+If Percentage Marks > 90, Grade is A+ If 70 <= Percentage Marks <= 89, Grade is A If 60 <= Percentage Marks <= 69, Grade is B If 50 <= Percentage Marks <= 59, Grade is C If Percentage Marks <= 40, Grade is D
+
+Input Format
+
+Integer Value to enter number of subjects, count Enter marks of subjects depending upon the the total number of subjects
+
+Constraints
+
+Number of subjects should not exceed 7
+
+Output Format
+
+Character output to show grades
+
+Sample Input 0
+
+5
+50 57 89 87 56
+Sample Output 0
+
+B
+*/
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int sum=0;
+        int n=scan.nextInt();
+        if(n==7)
+        {
+            return;
+        }
+        //int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            int va=scan.nextInt();
+            sum=sum+va;
+        }
+        sum=sum/n;
+        if(sum>=90)
+        {
+            System.out.print("A+");
+        }
+        else if(sum>=70 && sum<90)
+        {
+            System.out.print("A");
+        }
+        else if(sum>=60 && sum<70)
+        {
+            System.out.print("B");
+        }
+        else if(sum>=50 && sum<60)
+        {
+            System.out.print("C");
+        }
+        else if(sum<50)
+        {
+            System.out.print("D");
+        }
+    }
+}
