@@ -1,0 +1,93 @@
+/*
+Write a java program to find common elements present in 3 different arrays. and print them in assending order.
+
+Input Format
+
+first line accept the Size of 1st array Sencond line accepts the elements of the first array third line accept the Size of 2nd array fourth line accepts the elements of the 2nd array fifth line accept the Size of 3rd array sixth line accepts the elements of the 3rd array
+
+Constraints
+
+size of all arrays must be >o all elements of the array must be integers
+
+Output Format
+
+print the common elements present in 3 different arrays in assending order
+
+Sample Input 0
+
+5
+3 7 8 6 5
+4
+4 3 8 6
+5
+3 7 8 5 6
+Sample Output 0
+
+3 6 8
+*/
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n1=scan.nextInt();
+        int [] arr1=new int[n1];
+        int [] arr4=new int[10];
+        for(int i=0;i<n1;i++)
+        {
+            arr1[i]=scan.nextInt();
+        }
+        int n2=scan.nextInt();
+         int [] arr2=new int[n2];
+        for(int i=0;i<n2;i++)
+        {
+            arr2[i]=scan.nextInt();
+        }
+        int n3=scan.nextInt();
+        int [] arr3=new int[n3];
+        for(int i=0;i<n3;i++)
+        {
+            arr3[i]=scan.nextInt();
+        }
+        int m=0;
+        for(int i=0;i<n1;i++)
+        {
+            for(int j=0;j<n2;j++)
+            {
+                for(int k=0;k<n3;k++)
+                {
+                    if(arr1[i]==arr2[j]&&arr1[i]==arr3[k])
+                    {
+                        arr4[m]=arr1[i];
+                        m++;
+                    }
+                }
+            }
+        }
+        int key;
+        for(int i=1;i<m;i++)
+        {
+            key=arr4[i];
+         int j=i-1;
+         while(j>=0&&key<arr4[j])
+         {
+             arr4[j+1]=arr4[j];
+             j=j-1;
+         }
+         arr4[j+1]=key;
+            
+        }
+        
+        for(int i=0;i<m;i++)
+        {
+            System.out.print(arr4[i]+" ");
+        }
+    }
+}
