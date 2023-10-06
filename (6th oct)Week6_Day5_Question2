@@ -29,6 +29,82 @@ Sample Output 0
 100 20
 */
 
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+class Employee
+{
+    Scanner scan=new Scanner(System.in);
+    int id,age,k=0,h=0;
+    int id2[]=new int[10];int age2[]=new int[10];
+    void get(int i,int ag)
+    {
+        id=i;
+        
+        age=ag;
+       
+    }
+    void show(int m)
+    {
+        if(age<=30&&age<m)
+        {
+            //System.out.println(id+" "+age);
+            id2[k]=id;age2[k]=age;k++;
+        }
+    }
+    void show2()
+    {
+        for(int i=1;i<k;i++)
+        {
+            if(age2[i-1]<age2[i])
+            {
+               h=i-1; 
+            }
+            else
+            {
+                h=i;
+            }
+        }
+        System.out.println(id2[h]+" "+age2[h]);
+    }
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        if(n<1||n>10)
+        {
+            System.out.print("Invalid input");
+            return;
+        }
+        int min=Integer.MAX_VALUE;
+        Employee obj=new Employee();
+        while(n!=0)
+        {
+        
+            int id=scan.nextInt();
+            int age=scan.nextInt();
+             if(id<10||id>1000||age<18||age>50)
+        {
+            System.out.print("Invalid data");
+            return;
+        }
+           
+            obj.get(id,age);
+            obj.show(min);
+            min=age;
+            n--;
+        }
+       obj.show2();
+    }
+}
+
+/*
 import java.util.Scanner;
 
 class Employee {
@@ -85,3 +161,4 @@ public class Main {
         sc.close();
     }
 }
+*/
