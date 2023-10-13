@@ -1,0 +1,45 @@
+/*
+Kumar has been given a string and asked to determine whether it can be converted into a palindrome after removing at most one character
+
+Input Format
+
+str="abcbea"
+
+Constraints
+
+1<=Str.length<=10^3 Str consists of Lowercase English characters
+
+Output Format
+
+true
+
+Sample Input 0
+
+abceba
+Sample Output 0
+
+true
+*/
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        String s1=scan.nextLine();
+        int n=s1.length();
+char s3[]=new char [n];
+for(int i=n-1;i>=0;i--)
+{
+    int j=(n-1)-i;
+s3[j]=s1.charAt(i);
+}
+System.out.println(s3);
+    }
+}
