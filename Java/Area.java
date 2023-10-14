@@ -1,0 +1,27 @@
+// find area of rectangle using class concept
+
+import java.util.Scanner;
+
+class B
+{
+	double length,breath;
+	
+	void getdata()
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.print("Enter length of rectangle");length=scan.nextDouble();
+		System.out.print("Enter breath of rectangle");breath=scan.nextDouble();
+	}
+	void display()
+	{
+	System.out.print("Area of rectangle: "+length*breath);
+	}
+}
+class Area
+{
+public static void main(String[] args)
+{
+B obj=new B();
+obj.getdata();
+obj.display();
+}}

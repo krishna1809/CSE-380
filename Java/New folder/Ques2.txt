@@ -1,0 +1,59 @@
+/*
+Ques 2:  Problem Statement: You have a class called Customer that contains a long method for processing an order.
+This method has multiple responsibilities, including order validation, calculation, and notification.
+Refactor the code to follow the Single Responsibility Principle (SRP) and make it more maintainable.
+*/
+
+public class Customer 
+{
+    private String name;
+    private List<OrderItem> orderItems;
+    public void processOrder()
+	{
+        
+        if (OrderValidation())
+		{
+            
+            double total = calculator.calculateOrderTotal();
+            
+            notifier.notifyCustomer(name, total);
+			return;
+        } 
+		else
+		{
+            System.out.println("Order validation failed");
+        }
+    }
+}
+
+void OrderValidation()
+{
+    public boolean validateOrder(List<OrderItem> orderItems)
+	{
+        return true;
+    }
+}
+
+void OrderCalculator()
+{
+    private List<OrderItem> orderItems;
+
+    public OrderCalculator(List<OrderItem> orderItems)
+	{
+        this.orderItems = orderItems;
+    }
+
+    public double calculateOrderTotal()
+	{
+        // Calculation logic
+        return 0.0;
+    }
+}
+
+void OrderNotifier()
+{
+    public void notifyCustomer(String customerName, double total)
+	{
+        // Notification logic
+    }
+}

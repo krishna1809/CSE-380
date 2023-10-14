@@ -1,0 +1,30 @@
+/*
+Ques 1:
+Problem Statement: You have a class called Product with multiple attributes,
+but you find that some of the attributes are being duplicated in another class called OrderItem.
+Refactor the code to eliminate code duplication and improve code maintainability.
+
+*/
+
+
+
+public class Product {
+    private String name;
+    private double price;
+    private int quantity;
+
+    public Product(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+}
+public class OrderItem {
+    private String productName;
+    private double productPrice;
+    private int quantity;
+
+public OrderItem(String productName, double productPrice, int quantity) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.quantity = quantity;
+}

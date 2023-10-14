@@ -1,0 +1,25 @@
+/* String constructors
+
+1.default constructor
+Ex:	String()
+
+String s=new String();	//default constructor
+
+2.String (String str)
+
+ String s2=new String("HELLO"); //String parameter constructor
+ 
+3.String(char char[])
+Eg:
+char c[]={'a','e','o'};
+String s3=new String(c); //aeo
+
+4.parameter(array of character,startong,no. of character)
+String(char c[]mint s,int c)
+String s4=new String(c,0,2);	//ae
+
+*/
+class JString125
+{
+public static void main(String[] args)
+{
