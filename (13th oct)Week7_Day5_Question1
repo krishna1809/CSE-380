@@ -1,0 +1,49 @@
+/*
+Tara has been assigned a task by her friends to retrieve a character that appears most number of the times in a given sequence.If the frequency of two or more characters is same than return the first character that occurs in the string among them.
+
+Input Format
+
+A string literal
+
+Constraints
+
+The string will contain only characters, from the ranges ('a'-z',A-Z,0'-9'), else "Error"
+
+Output Format
+
+The character occuring maximum number of times
+
+Sample Input 0
+
+takeforward
+Sample Output 0
+
+Maximum occurring character is: a
+*/
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        String s1=scan.nextLine().toLowerCase();
+        int l=s1.length();
+        int c=0,ind;
+        for(int i=0;i<l;i++)
+        {
+            for(int j=0;j<l;j++)
+            {
+                if(s1.charAt(i)==s1.charAt(j))
+                {
+                    ind=i;
+                    c++;
+                }
+            }
+        }
+    }
+}
