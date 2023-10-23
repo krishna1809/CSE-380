@@ -1,0 +1,20 @@
+In which one method getInfo must be present to accept id and name of the person. Then using object print the same.
+
+Input Format
+
+1 john
+
+Constraints
+
+id must be integer name must be String
+
+Output Format
+
+1 john
+
+Sample Input 0
+
+2 Robin
+Sample Output 0
+
+2 Robin
