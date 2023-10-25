@@ -1,0 +1,24 @@
+Riya asked her friend to make calculator using nested class using the following operation. 1. The outer class name is Outer_Calculator 2. The inner class name is static Inner_Calculator with four method addition , subtraction , multiplication and division. 3. Write main method under the class of Outer_Calculator.
+
+if the input is integer than display the massage as "invalid input" and if the operator is not valid operator than display the massage as "invalid operator".
+
+Input Format
+
+Line 1: Read 1st Number Line 2: Read 2nd Number Line 3: Read Operator
+
+Constraints
+
+Number n1, n2 > 0 Operator : +, -, *, / (any one)
+
+Output Format
+
+Display the result
+
+Sample Input 0
+
+4
+5
++
+Sample Output 0
+
+9
