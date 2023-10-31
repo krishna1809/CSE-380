@@ -1,0 +1,20 @@
+Write a program to take the input of String and display all the characters present in the input string in sorted order with their count. If the length of the string will be less than equal to 5, display the message “Invalid Input”.
+
+Input Format
+
+Your program should take the input of one string.
+
+Constraints
+
+Length of strings should be greater than 5.
+
+Output Format
+
+Your program should display the characters present in the string in sorted order with their count.
+
+Sample Input 0
+
+hurrey
+Sample Output 0
+
+e1h1r2u1y1
